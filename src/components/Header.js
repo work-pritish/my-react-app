@@ -15,7 +15,7 @@ export default function Header({ title }) {
     // window.location.href = "/login";
   }
   return (
-    <header className="bg-purple-800 text-white p-4 flex justify-between">
+    <header className="bg-teal-500 text-white p-4 flex justify-between">
       <div className="flex">
         <p className="mx-2">
           <Link to="/">{title}</Link>
