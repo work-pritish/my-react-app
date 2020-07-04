@@ -38,7 +38,7 @@ function Login() {
   return (
     <div className="flex justify-center">
       <form
-        className="w-1/2 bg-gray-100 border rounded shadow py-10 text-center"
+        className="w-1/2 bg-gray-100 rounded shadow-lg py-10 text-center"
         onSubmit={handleForm}
       >
         <h1 className="text-3xl">Login Here</h1>
@@ -48,23 +48,23 @@ function Login() {
             type="email"
             name="email"
             placeholder="Enter your email"
-            className="p-2 border border-gray-800 w-64"
+            className="p-2 border border-gray-800 w-64 rounded-lg"
             value={form.email}
             onChange={handleChange}
           />
         </div>
-        <div className="my-5 flex justify-center">
+        <div className="my-2 flex justify-center">
           <input
             type="password"
             name="password"
             placeholder="Enter your password"
-            className="p-2 border border-gray-800 my-4 w-64"
+            className="p-2 border border-gray-800 my-4 w-64 rounded-lg"
             onChange={handleChange}
             value={form.password}
           />
         </div>
         <button
-          className={`w-64 text-white p-2 my-5 ${
+          className={`w-64 text-white p-2 my-2 ${
             isLoading ? "bg-blue-500" : "bg-blue-700"
           }`}
           disabled={isLoading}

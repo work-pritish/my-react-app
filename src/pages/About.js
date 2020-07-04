@@ -1,7 +1,7 @@
 import React from "react";
 
 function About() {
-  const [title, setTitle] = React.useState("About");
+  const title = "ABOUT";
   return <div>{title}</div>;
 }
 
