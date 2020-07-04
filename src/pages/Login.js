@@ -37,7 +37,49 @@ function Login() {
 
   return (
     <div className="flex justify-center">
-      <form
+      <form class="w-full p-8 lg:w-1/2 bg-white shadow-lg" onSubmit={handleForm}>
+                    <div class="flex justify-center shadow-lg">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Circle-icons-profile.svg/768px-Circle-icons-profile.svg.png"
+                            class="w-40 h-36" />
+                    </div>
+
+                    <div class="px-16">
+                        <div class="mt-4 flex items-center justify-between">
+                            <span class="border-b w-1/5 lg:w-1/4"></span>
+                            <a href="#" class="text-xl text-center text-gray-500 uppercase">USER LOGIN</a>
+                            <span class="border-b w-1/5 lg:w-1/4"></span>
+                        </div>
+                        <div class="mt-16">
+                            <label class="block text-gray-700 text-sm font-bold mb-2"></label>
+                            <input
+                                class="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full appearance-none"
+                                type="email" name="email" placeholder="EMAIL" value={form.email}
+                                onChange={handleChange}/>
+                        </div>
+                        <div class="mt-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2"></label>
+                            <input
+                                class="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full appearance-none"
+                                type="password" name="password" placeholder="PASSWORD" onChange={handleChange}
+                                value={form.password} />
+                        </div>
+                        <div class="mt-4">
+                            <button
+                                className={`w-full text-white p-2 my-2 ${
+                                  isLoading ? "bg-blue-500" : "bg-blue-700"
+                                }`}
+                                disabled={isLoading}
+                              >
+                                {isLoading ? (
+                                  <i className="fas fa-circle-notch fa-spin"></i>
+                                ) : (
+                                  "LOGIN"
+                                )}</button>
+                        </div>
+
+                    </div>
+                </form>
+      {/* <form
         className="w-1/2 bg-gray-100 rounded shadow-lg py-10 text-center"
         onSubmit={handleForm}
       >
@@ -75,7 +117,7 @@ function Login() {
             "Login"
           )}
         </button>
-      </form>
+      </form> */}
     </div>
   );
 }
