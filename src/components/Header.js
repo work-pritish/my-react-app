@@ -21,13 +21,13 @@ export default function Header({ title }) {
           <Link to="/" className="bg-teal-700 p-2 italic mt-4">{title}</Link>
         </p>
 
-        <p className="mx-4 bg-teal-600 p-2">
+        <p className="mx-4 p-2">
           <Link to="/users">USERS</Link>
         </p>
-        <p className="mx-2 bg-teal-600 p-2">
+        <p className="mx-2 p-2">
           <Link to="/about">ABOUT</Link>
         </p>
-        <p className="mx-2 bg-teal-600 p-2">
+        <p className="mx-2 p-2">
           <Link to="/card-game">CARD GAME</Link>
         </p>
       </div>
@@ -38,7 +38,7 @@ export default function Header({ title }) {
           </p>
         ) : (
           
-            <Link to="/login" className="bg-black p-2 hover:bg-gray-700 rounded-lg">LOGIN</Link>
+            <Link to="/login" className="p-2 hover:bg-gray-700 rounded-lg">LOGIN</Link>
           
         )}
       </div>
